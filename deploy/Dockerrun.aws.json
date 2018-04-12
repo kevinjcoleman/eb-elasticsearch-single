@@ -1,0 +1,19 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "kevinjcoleman/elasticsearch-single:v1"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "9200",
+      "HostPort": "9200"
+    }
+  ],
+  "Volumes": [
+    {
+      "HostDirectory": "/data/esdata",
+      "ContainerDirectory": "/usr/share/elasticsearch/data"
+    }
+  ],
+  "Logging": "/var/log/elasticsearch"
+}
